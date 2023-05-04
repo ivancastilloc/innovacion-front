@@ -1,0 +1,34 @@
+body {
+  font-family: 'Righteous', cursive;
+}
+
+:root{
+  --main-black: #0d0d0f;
+  --main-grey: #1c1d1f;
+  --main-pink: #f20e89;
+  --main-purple: #e473ff;
+}
+
+.navbar-bg-dark{
+  background-color: var(--main-black);
+}
+
+.navbar-brand{
+  color: var(--main-pink)
+}
+
+.nav-link{
+  color: white;
+}
+
+.nav-link:hover{
+  color: var(--main-grey);
+}
+
+.userInfo{
+  width: 10%;
+}
+
+.navbar-toggler{
+  background-color: white;
+}
