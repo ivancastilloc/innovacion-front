@@ -1,5 +1,6 @@
 body {
   font-family: 'Righteous', cursive;
+  height: 100vh;
 }
 
 :root{
@@ -14,15 +15,28 @@ body {
 }
 
 .navbar-brand{
-  color: var(--main-pink)
+  color: var(--main-pink);
+  transition: all 0.5s;
+}
+
+.navbar-brand:hover {
+  color: var(--main-pink);
+  font-size: 1.5rem;
 }
 
 .nav-link{
   color: white;
+  transition: all 0.5s;
 }
 
 .nav-link:hover{
-  color: var(--main-grey);
+  color: white;
+  font-size: 1.2rem;
+}
+
+.nav-link:active, .nav-link:focus{
+  color: white;
+  font-size: 1.2rem;
 }
 
 .userInfo{
@@ -32,3 +46,59 @@ body {
 .navbar-toggler{
   background-color: white;
 }
+
+.content {
+  background-color: var(--main-grey);
+  color:white;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-text-container{
+  padding: 0 10%;
+}
+
+.content-title{
+  font-size: 3.2rem;
+}
+
+.content-register-button{
+  background-color: var(--main-pink);
+  color: white;
+  margin-top: 20px ;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+
+.content-register-button:hover{
+  color: white;
+  font-size: 1.1rem;
+  padding: 15px 25px;
+}
+
+.header-img{
+  min-width: 50%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+  transition: transform 0.2s ease-in-out;
+  animation: image-hover 3s infinite ease-in-out;
+}
+
+@keyframes image-hover {
+  0% {
+    transform: scale(0.985);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.985);
+  }
+}
+
