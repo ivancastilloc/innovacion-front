@@ -1,6 +1,5 @@
 body {
   font-family: 'Righteous', cursive;
-  height: 100vh;
 }
 
 :root{
@@ -41,6 +40,9 @@ body {
 
 .userInfo{
   width: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .navbar-toggler{
@@ -80,25 +82,129 @@ body {
   padding: 15px 25px;
 }
 
+.cards-row{
+  background-color: var(--main-black);
+  color: white;
+}
+
+.cards-row-title{
+  padding: 2rem 0 0 2rem ;
+}
+
+.cards-row-content {
+  padding: 20px;
+  display: flex;
+  overflow-x: scroll;
+}
+.cards-row-content::-webkit-scrollbar {
+  display: none;
+}
+
+.cards-row-item{
+  margin: 0 10px;
+  border-radius: 30px;
+  transition: all 0.5s;
+  user-select: none;
+}
+
+.cards-row-item:hover{
+  margin: 0 15px;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.card-image {
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.card-image img {
+  max-height: 100%;
+  filter: grayscale(0.8);
+  transition: all 0.5s;
+}
+.card-image img:hover {
+  filter:none;
+}
+
 .header-img{
   min-width: 50%;
   height: 100%;
-  max-height: 100%;
   object-fit: cover;
   filter: brightness(0.6);
   transition: transform 0.2s ease-in-out;
   animation: image-hover 3s infinite ease-in-out;
 }
 
-@keyframes image-hover {
-  0% {
-    transform: scale(0.985);
-  }
-  50% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0.985);
-  }
+
+/* Estilos para el fondo del modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
+.modal-content{
+  width: 60%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.modal-text{
+  width: 80%;
+  background-color: var(--main-grey);
+  box-shadow: 40px 40px 20px rgba(0, 0, 0, 0.2) ;
+  padding: 5%;
+}
+
+.modal-image-wrapper {
+  width: 100%;
+}
+
+.modal-image {
+  object-fit: cover;
+  object-position: center;
+  max-width: 100%;
+  height: 100%;
+}
+
+.modal-close {
+  background-color: transparent;
+  border: none;
+  font-size: 2.5rem;
+  color: var(--main-black);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.modal-platforms{
+  margin-top: 20%;
+}
+
+.modal-platforms-icons{
+  width: 100%;
+}
+
+.platform-icon{
+  font-size: 2rem;
+  margin: 0 2%;
+}
+
+.spotify-icon{
+  color: #1DB954;
+}
+
+.youtube-icon{
+  color: #FF0000;
+}
