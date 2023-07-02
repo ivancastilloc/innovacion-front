@@ -9,6 +9,10 @@ body {
   --main-purple: #e473ff;
 }
 
+.navbar{
+  z-index: 999;
+}
+
 .navbar-bg-dark{
   background-color: var(--main-black);
 }
@@ -207,4 +211,42 @@ body {
 
 .youtube-icon{
   color: #FF0000;
+}
+
+.pageContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+.pageHeader{
+  width: 96.7%;
+  margin-left: 50px;
+}
+
+.sideBar{
+  background-color: var(--main-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  padding: 0 1%;
+  height: 100vh;
+}
+
+.sidebar-icon{
+  color: white ;
+  margin-top: 40px;
+  transition: all 0.5s;
+}
+
+.sidebar-icon-active{
+  color: var(--main-pink)!important;
+  transform: scale(1.4)!important;
+}
+
+.sidebar-icon:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+  color: var(--main-pink);
 }
