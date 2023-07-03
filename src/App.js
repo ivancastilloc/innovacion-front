@@ -24,7 +24,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Index />} />
 
-          <Route exact path="/videojuegos" element={<Videojuegos />} />
+          <Route exact path="/videojuegos" element={<SteamGames />} />
           <Route exact path="/videojuegos/steam" element={<SteamGames />} />
           <Route exact path="/videojuegos/playstation" element={<PlayStationGames />} />
           <Route exact path="/videojuegos/xbox" element={<XboxGames />} />
