@@ -59,7 +59,7 @@ function SteamGames() {
       )
       const responseData = await response.json(); 
       setData(responseData);
-      const gameNames = responseData.related.slice(0, 5).map(game => game[0]);
+      const gameNames = responseData.related.slice(0, 10).map(game => game[0]);
       let newCards = [];
       // Fetch the 'appid' for each game
       gameNames.forEach(async (gameName) => {
@@ -93,9 +93,7 @@ function SteamGames() {
         </Link>
       </div>
       <div className='pageHeader'>
-        <CardsRow title='Últimos lanzamientos' cards={cards} />
         <CardsRow title='Videojuegos Recomendados' cards={cards} />
-        <CardsRow title='Mejores ofertas' cards={cards} />
       </div>
     </div>
   );
